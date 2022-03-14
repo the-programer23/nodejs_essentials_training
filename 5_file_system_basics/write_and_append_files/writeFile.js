@@ -1,0 +1,21 @@
+const fs = require('fs');
+
+const htmlContent = `
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Page Title</title>
+    </head>
+    <body>
+
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+
+    </body>
+</html>
+`;
+
+fs.writeFile('./htmlTest.html', htmlContent, err => {
+    if(err) throw err;
+    console.log('File saved');
+});
